@@ -3,7 +3,7 @@
 Bu repo, `ai-team` marketplace'indeki **agentic-team** plugin'iyle çalışan bir projedir. Bu dosya ekibe projeye özgü bilgileri verir; ekibin rolleri ve çalışma yöntemi plugin'dedir.
 
 ## Proje
-- **Ne:** AI ekip akışını denemek için tek seviyeli bir 2.5D platformer prototipi.
+- **Ne:** AI ekip akışını denemek için tek seviyeli bir saf 2D platformer prototipi (Godot 4, Node2D).
 - **Tür:** Oyun (Godot 4, GDScript)
 - **Dil:** Doküman ve yorumlar Türkçe, kod tanımlayıcıları İngilizce.
 
@@ -42,9 +42,9 @@ Bu repo, `ai-team` marketplace'indeki **agentic-team** plugin'iyle çalışan bi
 - `scripts/` — GDScript dosyaları
 - `assets/models/`, `assets/textures/`, `assets/audio/` — Git LFS ile takip edilir
 - `docs/adr/` — mimari kararlar
-- `docs/design/GDD.md` — oyun tasarım dokümanı (henüz yok)
+- `docs/design/GDD.md` — oyun tasarım dokümanı
 - `docs/CHANGELOG.md` — değişiklik günlüğü
 
 ## Projeye özgü kurallar
 - Hedef platform: masaüstü (macOS/Windows). Kontroller: klavye + gamepad.
-- Görsel stil: basit geometrik şekiller (yer tutucu), gerçek modeller lokal 3D aşamasında gelecek.
+- Görsel stil: basit geometrik şekiller (yer tutucu), gerçek sprite'lar sonraki aşamada gelecek.
