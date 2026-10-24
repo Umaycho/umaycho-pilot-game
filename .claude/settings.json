@@ -1,0 +1,13 @@
+{
+  "extraKnownMarketplaces": {
+    "ai-team": {
+      "source": {
+        "source": "github",
+        "repo": "Umaycho/umaycho-ai-team"
+      }
+    }
+  },
+  "enabledPlugins": {
+    "agentic-team@ai-team": true
+  }
+}

@@ -1,0 +1,46 @@
+name: Ekip görevi
+description: AI ekibine yeni bir iş ver
+title: "[Görev] "
+body:
+  - type: textarea
+    id: hedef
+    attributes:
+      label: Hedef
+      description: Ne istiyorsun ve neden? Bir-iki cümle yeterli.
+      placeholder: Karakter çift zıplama yapabilsin, böylece 2. seviyedeki yüksek platformlara erişilebilsin.
+    validations:
+      required: true
+  - type: textarea
+    id: kabul
+    attributes:
+      label: Kabul kriterleri
+      description: İşin bittiğini nasıl anlarız? Her satır ölçülebilir olsun.
+      placeholder: |
+        - [ ] Havadayken ikinci zıplama tuşuna basınca bir kez daha zıplar
+        - [ ] Üçüncü basış etkisizdir
+        - [ ] Yere değince sayaç sıfırlanır
+    validations:
+      required: true
+  - type: dropdown
+    id: tur
+    attributes:
+      label: İş türü
+      description: Etiketi de buna göre ekle (type:code, type:design, type:docs, type:3d).
+      options:
+        - Kod (type:code)
+        - Tasarım (type:design)
+        - Doküman (type:docs)
+        - 3D asset (type:3d)
+    validations:
+      required: true
+  - type: textarea
+    id: notlar
+    attributes:
+      label: Notlar / referanslar
+      description: Bağlantılar, görseller, kısıtlar.
+  - type: checkboxes
+    id: baslat
+    attributes:
+      label: Başlatma
+      options:
+        - label: Hazır olduğunda yerel Claude Code'da `issue #<no>'i yürüt` diyerek ekibi başlatacağım.

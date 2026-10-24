@@ -1,0 +1,12 @@
+# Godot 4
+.godot/
+.import/
+export_presets.cfg
+*.translation
+
+# Claude Code yerel ayarları
+.claude/settings.local.json
+
+# İşletim sistemi
+.DS_Store
+Thumbs.db
