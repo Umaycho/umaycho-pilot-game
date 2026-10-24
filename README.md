@@ -1,6 +1,6 @@
 # Umaycho Pilot Game
 
-AI üretim ekibi akışını denemek için tek seviyeli 2.5D platformer prototipi. Godot 4 ile geliştirilir; işler GitHub issue'ları olarak açılır ve [`agentic-team`](https://github.com/Umaycho/umaycho-ai-team) plugin'iyle yerel Claude Code tarafından yürütülür.
+AI üretim ekibi akışını denemek için tek seviyeli 2D platformer prototipi ([oyun tasarım dokümanı](docs/design/GDD.md)). Godot 4 (Node2D) ile geliştirilir; işler GitHub issue'ları olarak açılır ve [`agentic-team`](https://github.com/Umaycho/umaycho-ai-team) plugin'iyle yerel Claude Code tarafından yürütülür.
 
 ## Başlarken
 1. Godot 4.x (standart sürüm) kurulu olmalı.
