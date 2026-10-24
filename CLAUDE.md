@@ -9,7 +9,8 @@ Bu repo, `ai-team` marketplace'indeki **agentic-team** plugin'iyle çalışan bi
 
 ## Çalışma modu: LOKAL
 - Ekip **geliştiricinin kendi bilgisayarındaki Claude Code** ile çalışır. Bulutta GitHub Actions ile çalışan bir AI workflow'u yoktur ve Claude API anahtarı kullanılmaz.
-- GitHub'a erişim yerel `gh` CLI ile yapılır (`gh auth status` giriş yapılmış olmalı; board için `project` kapsamı gerekir).
+- GitHub'a erişimde **önce agentic-team plugin'inin GitHub MCP sunucusu** (`github`: repos, issues, pull_requests, projects) kullanılır; `GITHUB_PAT` ortam değişkeni tanımlı olmalı (`repo`, `project`, `read:org` kapsamları).
+- MCP araçları oturumda yoksa (ör. sunucu oturum açıldıktan sonra bağlandıysa) yedek olarak yerel `gh` CLI kullanılır (`/opt/homebrew/bin/gh`; `gh auth status` giriş yapılmış olmalı, board için `project` kapsamı gerekir).
 - Görev başlatma: kullanıcı bu klasörde Claude Code'a "issue #N'i yürüt" der veya `/agentic-team:orkestra N` çağırır → **`orkestra` skill'ini izle**.
 - **Onay:** Plan, issue'ya yorum olarak yazılır ve kullanıcıya sohbette de özetlenir. Kullanıcı sohbette "onaylandı" derse veya issue'ya `@claude onaylandı` yazarsa uygulamaya geç. Onay gelmeden kod yazma.
 - `type:3d` işleri ve Blender/Hunyuan3D araçları henüz kurulu değil; bu tür işleri planla ama uygulama, "lokal 3D ortamı kurulmadı" diye raporla.
@@ -17,7 +18,8 @@ Bu repo, `ai-team` marketplace'indeki **agentic-team** plugin'iyle çalışan bi
 ## Board (GitHub Projects)
 - **owner:** Umaycho
 - **Proje numarası:** 1
-- **Statüler (sırayla):** Backlog, Planlanıyor, Onay bekliyor, Devam ediyor, İncelemede, Tamam
+- **Statüler (sırayla, board'daki adlarıyla birebir):** `Backlog`, `Planning`, `Pending Approval`, `In Progress`, `In the review`, `Done`
+  - Karşılıkları: Backlog = Backlog, Planlanıyor = `Planning`, Onay bekliyor = `Pending Approval`, Devam ediyor = `In Progress`, İncelemede = `In the review`, Tamam = `Done`. Plugin skill'leri Türkçe adı söylediğinde board'da İngilizce karşılığını kullan.
 - **Döngü sınırı:** 3 (QA/inceleme turu; aşılırsa insana devredilir)
 - Etiketler: `type:code`, `type:design`, `type:docs`, `type:3d`
 
